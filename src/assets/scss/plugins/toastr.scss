@@ -1,0 +1,25 @@
+@import "src/assets/scss/utils/vars";
+
+// toast success
+.toast-success {
+  background-color: $success-color !important;
+  border-radius: 15px !important;
+  margin: 20px !important;
+}
+
+// toast error
+.toast-error {
+  background-color: $error-color !important;
+  border-radius: 15px !important;
+  margin: 20px !important;
+}
+
+// toast warning
+.toast-warning {
+  background-color: $warning-color !important;
+  border-radius: 15px !important;
+  margin: 20px !important;
+}
+
+// regular style toast
+@import 'ngx-toastr/toastr';

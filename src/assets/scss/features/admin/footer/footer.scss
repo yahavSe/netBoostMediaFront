@@ -1,0 +1,105 @@
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+  z-index: 100;
+  width: 85%;
+  height: 8vh;
+  position: fixed;
+  bottom: 0;
+  opacity: 1;
+  box-shadow: 0 -7px 26px #0000000b;
+  background: white linear-gradient(91deg, #FFFFFF14 0, #0A287C5A 100%) 0 0 no-repeat padding-box;
+
+  .footer-left-container {
+    display: flex;
+    align-items: center;
+    width: 40vw;
+    margin-left: 1vh;
+    gap: 1vh;
+    .footer-left-header-wrapper{
+      display: flex;align-items: center;
+      .month-and-header{
+        width: max-content;
+        font-size: clamp(5px, 2.5vh, 2.5vh);
+      }
+    }
+
+    .up-icon {
+      width: 3.5vw;
+      min-width: 3.5vw;
+    }
+  }
+
+  .footer-right-container {
+    width: 75%;
+
+    .carousel {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      .slick-prev {
+        display: none !important;
+      }
+
+      .slider-item {
+        gap: 1vw;
+        padding-inline: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4vh;
+        min-height: 4vh;
+        opacity: 0.82;
+        color: #8A8C98;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-left: 10px;
+        border-radius: 6vh;
+        background: #FFFFFF 0 0 no-repeat padding-box;
+
+        .left-slider-item {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-decoration: underline;
+          letter-spacing: 0.08px;
+          padding-right: 6px;
+          font-size: clamp(2px, 2vh, 2vh);
+          padding-left: 6px;
+        }
+      }
+    }
+  }
+}
+
+html[dir=rtl] {
+  .footer-wrapper {
+    background: white linear-gradient(91deg, #0A287C5A 0, #FFFFFF14 100%) 0 0 no-repeat padding-box;
+
+    .footer-left-container{
+      margin-left: 0;
+      margin-right: 1vh;
+      width: fit-content;
+
+      .up-icon{}
+    }
+
+    .footer-right-container {
+      flex-grow: 1;
+      .carousel{
+        .slick-prev {}
+
+        .slider-item {
+          flex-direction: row-reverse;
+
+          .left-slider-item {
+            padding-left: 6px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.crawler-main {
+  height: 100%;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow: scroll;
+
+  .header {
+    font: normal normal 600 23px/22px OpenSans;
+  }
+  .form-wrapper{
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: center;
+    .input-wrapper{
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+
+      .input-error-wrapper{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .input-error {
+        color: red;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+      }
+      .input-header{
+        font: normal normal 600 18px/22px OpenSans;
+        color: #809FB8;
+        width: 8vw;
+      }
+      .input{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #D9E1E7;
+        border-radius: 16px;
+        min-width: 380px;
+        flex: 1;
+        text-align: inherit;
+        letter-spacing: 0px;
+        color: #809FB8;
+        font: normal normal 600 13px/22px OpenSans;
+      }
+      .input-number{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #D9E1E7;
+        border-radius: 16px;
+        min-width: 200px;
+        flex: 1;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #809FB8;
+        font: normal normal 600 13px/22px OpenSans;
+      }
+
+    }
+    .search-button{
+      cursor: pointer;
+      padding: 5px 20px;
+      background: #0A287C 0% 0% no-repeat padding-box;
+      border-radius: 10px;
+      text-align: left;
+      letter-spacing: 0px;
+      color: #FEFEFE;
+      font-size: 16px;
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+}
+// mobile
+@media (max-width: 1600px) {
+}

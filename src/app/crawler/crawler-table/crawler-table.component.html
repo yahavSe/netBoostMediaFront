@@ -1,0 +1,27 @@
+<div class="urls-table">
+    <table [dataSource]="urls" class="table-container" mat-table>
+        <ng-container matColumnDef="URL">
+            <th *matHeaderCellDef mat-header-cell>{{'URL' | transloco}}</th>
+            <td *matCellDef="let element" mat-cell>
+                {{element.url}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Time">
+            <th *matHeaderCellDef mat-header-cell>{{'Time' | transloco}}</th>
+            <td *matCellDef="let element" mat-cell>
+                {{element.time.date | date}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Parent">
+            <th *matHeaderCellDef mat-header-cell>{{'Parent' | transloco}}</th>
+            <td *matCellDef="let element" mat-cell>
+                {{element.parent}}
+            </td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="urlsColumns; sticky: true" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: urlsColumns; let i = index" mat-row></tr>
+    </table>
+</div>

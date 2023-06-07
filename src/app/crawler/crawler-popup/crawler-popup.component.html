@@ -1,0 +1,16 @@
+<div class="skip-onboarding">
+  <!--		close button-->
+  <mat-icon (click)="close()" class="close-button">close</mat-icon>
+
+  <!--	content-->
+  <div class="skip-onboarding__content">
+    <!--		title-->
+    <span class="title">{{'The Url Your Searching Already Exists Do You Want To Refresh The Results?' | transloco}}</span>
+
+    <!--		lets start button-->
+    <a (click)="refresh()" class="back-button">{{"Yes" | transloco}}</a>
+
+    <!--		skip button-->
+    <a (click)="close()" class="skip-button">{{'Skip' | transloco}}</a>
+  </div>
+</div>

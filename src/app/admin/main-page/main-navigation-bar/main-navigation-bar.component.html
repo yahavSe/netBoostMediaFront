@@ -1,0 +1,33 @@
+<div class="main-bar">
+  <mat-toolbar>
+    <div class="logo-div">
+      <img class="logo" src="../../../../assets/images/Group%201375@2x.png">
+    </div>
+    <div class="tool-bar">
+      <div class="filter-search-icons-div-right">
+        <div style="padding-right: 20px">
+          <span class="fi custom-fi fi-{{languageFormControl.value === 'he' ? 'il' : 'us'}}"></span>
+          <mat-select (selectionChange)="LanguageSetUp()" [formControl]="languageFormControl"
+                      [value]="(language$ | async)?.toString()"
+                      class="select"
+                      panelClass="lang-panel">
+            <mat-option value="en">
+              <span class="fi fi-us"></span>
+            </mat-option>
+            <mat-option value="he">
+              <span class="fi fi-il"></span>
+            </mat-option>
+          </mat-select>
+        </div>
+      </div>
+    </div>
+
+  </mat-toolbar>
+
+  <div class="main-side-bar">
+    <div style="min-width: 250px;"></div>
+    <div class="rout-div">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

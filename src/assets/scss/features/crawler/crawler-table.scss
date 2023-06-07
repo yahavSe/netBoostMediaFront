@@ -1,0 +1,87 @@
+.urls-table {
+  overflow-y: scroll;
+  height: 50vh;
+  width: 90vw;
+  overflow-x: hidden;
+
+  .table-container {
+    width: 100%;
+    box-shadow: none;
+    min-width: 800px;
+
+    .white {
+      background-color: white !important;
+    }
+
+    .mat-row .mat-cell {
+      border-bottom: 1px solid transparent;
+      border-top: 1px solid transparent;
+      text-align: initial;
+      max-width: 3vw;
+      font: normal normal medium 12px/36px Roboto;
+      letter-spacing: 0.05px;
+      color: #000000;
+    }
+
+    td.mat-column-URL{
+      text-align: initial;
+      align-content: center;
+      max-width: 30vw;
+    }
+
+    th.mat-header-cell:first-of-type,
+    td.mat-cell:first-of-type,
+    td.mat-footer-cell:first-of-type {
+      padding-left: 8px;
+      max-width: 3vw;
+      text-align: initial;
+      font: normal normal medium 12px/14px Roboto;
+      letter-spacing: 0px;
+      color: #809FB8;
+    }
+
+    td.mat-cell.mat-column-Parent {
+      color: #809FB8;
+      width: 3vw;
+      cursor: pointer;
+    }
+    td.mat-cell.mat-column-Parent,
+    th.mat-header-cell.mat-column-Parent {
+      flex: 0 0 10vw;
+      max-width: 10vw;
+      cursor: pointer;
+    }
+    td.mat-cell:last-of-type,
+    th.mat-header-cell:last-of-type{
+      width: 10vw;
+      color: #809FB8;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-align: left;
+      text-overflow: ellipsis;
+    }
+
+    th.mat-header-cell{
+      font-size: 14px;
+      font-family: OpenSans, sans-serif;
+      color: #8A8C98;
+      font-weight: 100;
+      text-align: initial;
+      cursor: pointer;
+
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #E4E4E4;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #0A287C 0 0 no-repeat padding-box;
+    border-radius: 3px;
+  }
+}

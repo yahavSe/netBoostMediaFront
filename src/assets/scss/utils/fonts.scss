@@ -1,0 +1,92 @@
+/*-------------- fonts -----------------*/
+/* Heebo */
+@font-face {
+  font-family: 'Heebo';
+  font-display: swap;
+  src: local('Heebo'), local('Heebo-VariableFont'),
+  url('../../fonts/Heebo/Heebo-VariableFont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-display: swap;
+
+  src: local('OpenSans'), local('OpenSans-VariableFont_wdth,wght'),
+  url('../../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+
+  src: local('Inter'), local('Inter-VariableFont_slnt,wght'),
+  url('../../fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  font-display: swap;
+
+  src: local('Inter-SemiBold'), local('Inter-Semi-Bold'),
+  url('../../fonts/Inter/Inter-Semi-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mulish';
+  font-display: swap;
+
+  src: local('Mulish'), local('Mulish-VariableFont_wght'),
+  url('../../fonts/Mulish/Mulish-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+
+  src: local('Poppins'), local('Poppins-Regular'),
+  url('../../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-display: swap;
+
+  src: local('ProximaNova'), local('Proxima-Nova-Font'),
+  url('../../fonts/ProximaNova/Proxima-Nova-Font.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-display: swap;
+
+  src: local('Helvetica Neue'), local('Helvetica-Neue-Font'),
+  url('../../fonts/HelveticaNeue/Helvetica-Neue-Font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  font-display: swap;
+
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+  url('../../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-display: swap;
+
+  src: local('Nunito'), local('Nunito-VariableFont_wght'),
+  url('../../fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+}
+
+
+//@font-face {
+//  font-family: 'Roboto';
+//  src: url('../../fonts/Roboto/Roboto-Black.ttf');
+//}
+
+//@font-face {
+//  font-family: 'Roboto';
+//  src: url('../../fonts/Roboto/Roboto-Bold.ttf');
+//  font-weight: bold;
+//}

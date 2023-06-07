@@ -1,0 +1,89 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2022",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+    "types": [
+      "gapi",
+      "gapi.auth2"
+    ],
+    "paths": {
+      "@net-boost-media/auth/*": [
+        "./src/app/auth/*"
+      ],
+      "@net-boost-media/admin/*": [
+        "./src/app/admin/*"
+      ],
+      "@net-boost-media/profile/*": [
+        "./src/app/profile/*"
+      ],
+      "@net-boost-media/contact/*": [
+        "./src/app/contact/*"
+      ],
+      "@net-boost-media/shops/*": [
+        "./src/app/shops/*"
+      ],
+      "@net-boost-media/components/*": [
+        "./src/app/shared/components/*"
+      ],
+      "@net-boost-media/services/*": [
+        "./src/app/shared/services/*"
+      ],
+      "@net-boost-media/types/*": [
+        "./src/app/shared/types/*"
+      ],
+      "@net-boost-media/constants/*": [
+        "./src/app/shared/constants/*"
+      ],
+      "@net-boost-media/utils/*": [
+        "./src/app/shared/utils/*"
+      ],
+      "@net-boost-media/shared/*": [
+        "./src/app/shared/*"
+      ],
+      "@net-boost-media/material/*": [
+        "./src/app/material/*"
+      ],
+      "@net-boost-media/translation/*": [
+        "./src/app/translation/*"
+      ],
+      "@net-boost-media/store/*": [
+        "./src/app/store/*"
+      ],
+      "@net-boost-media/app/*": [
+        "./src/app/*"
+      ],
+      "@net-boost-media/environments/*": [
+        "./src/environments/*"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

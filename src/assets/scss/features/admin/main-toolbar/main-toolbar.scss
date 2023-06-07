@@ -1,0 +1,313 @@
+$spider-size: 75px;
+$leg-size: 40px;
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+.main-toolbar {
+  height: 100%;
+  width: 100vw;
+  box-shadow: 15px 0px 15px rgba(10, 40, 124, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .spider {
+    display: inline-block;
+    top: 0;
+    left: 30%;
+    transition: 1s ease-in-out;
+    transform-origin: top;
+    .body {
+      @include size($spider-size, $spider-size * 0.8);
+      position: relative;
+      border-radius: 50%;
+      background-color: black;
+      .eye-left {
+        @include size($spider-size / 5);
+        position: absolute;
+        bottom: $spider-size / 5;
+        background-color: white;
+        border-radius: 50%;
+        left: $spider-size / 7;
+
+        &:after {
+          @include size($spider-size / 15);
+          content: "";
+          display: block;
+          margin: 55%;
+          background-color: black;
+          border-radius: 50px;
+          animation: look 8s infinite;
+        }
+      }
+      .eye-right {
+        @include size($spider-size / 5);
+        position: absolute;
+        bottom: $spider-size / 5;
+        background-color: white;
+        border-radius: 50%;
+        right: $spider-size / 7;
+
+        &:after {
+          @include size($spider-size / 15);
+          content: "";
+          display: block;
+          margin: 55%;
+          background-color: black;
+          border-radius: 50px;
+          animation: look 8s infinite;
+        }
+      }
+      .legs-left {
+        position: absolute;
+        bottom: -70%;
+        z-index: -1;
+        left: -70%;
+      }
+      .legs-right {
+        position: absolute;
+        bottom: -70%;
+        z-index: -1;
+        right: -60%;
+      }
+    }
+  }
+
+  .leg {
+    @include size($leg-size * 2, $leg-size);
+    margin-top: -$leg-size / 2;
+    border: 5px solid transparent;
+    border-top-color: black;
+    border-radius: 50%/#{$leg-size} $leg-size 0 0;
+  }
+
+  @for $i from 1 through 3 {
+    .legs-left .leg:nth-child(#{$i}) {
+      transform: rotate(40deg - $i * 30deg);
+      margin-left: $i * 10px;
+    }
+
+    .legs-right .leg:nth-child(#{$i}) {
+      transform: rotate(-40deg + $i * 30deg);
+      margin-left: $i * -10px;
+    }
+  }
+
+  @keyframes look {
+    0% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(0);
+    }
+    45% {
+      transform: translateX(-110%);
+    }
+    95% {
+      transform: translateX(-110%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .img-wrappper {
+    min-width: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      cursor: pointer;
+      height: 75px;
+      width: auto;
+      margin: 10px 8px;
+    }
+  }
+  .toolbar-icons {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    gap: 10px;
+    .search-pop--icon{
+      display: none;
+    }
+
+    .language-icon {
+      height: 24px;
+      width: 24px;
+      border: 2px solid #D9E1E7;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .icon-wrapper {
+      height: 24px;
+      width: 24px;
+      border: 2px solid #D9E1E7;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.disabled {
+  cursor: none;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.back-drop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #1C1C1C 0% 0% no-repeat padding-box;
+  mix-blend-mode: multiply;
+  opacity: 0.16
+}
+
+.languages-popover {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 5px 13px #16347729;
+  border: 2px solid #D9E1E7;
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: auto;
+
+  .language-option {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px;
+    gap: 6px;
+    height: 2rem;
+    width: 2rem;
+    align-items: center;
+    padding-bottom: 17px;
+
+    &:hover {
+      background-color: #70707038;
+    }
+  }
+}
+html[dir="rtl"] {
+  //desktop
+  .main-toolbar {
+    .spider {
+      display: inline-block;
+      top: 0;
+      left: 30%;
+      transition: 1s ease-in-out;
+      transform-origin: top;
+      .body {
+        @include size($spider-size, $spider-size * 0.8);
+        position: relative;
+        border-radius: 50%;
+        background-color: black;
+        .eye-left {
+          @include size($spider-size / 5);
+          position: absolute;
+          bottom: $spider-size / 5;
+          background-color: white;
+          border-radius: 50%;
+          left: $spider-size / 7;
+
+          &:after {
+            @include size($spider-size / 15);
+            content: "";
+            display: block;
+            margin: 55%;
+            background-color: black;
+            border-radius: 50px;
+            animation: look2 8s infinite;
+          }
+        }
+        .eye-right {
+          @include size($spider-size / 5);
+          position: absolute;
+          bottom: $spider-size / 5;
+          background-color: white;
+          border-radius: 50%;
+          right: $spider-size / 7;
+
+          &:after {
+            @include size($spider-size / 15);
+            content: "";
+            display: block;
+            margin: 55%;
+            background-color: black;
+            border-radius: 50px;
+            animation: look2 8s infinite;
+          }
+        }
+        .legs-left {
+          position: absolute;
+          bottom: -70%;
+          z-index: -1;
+          left: -100%;
+        }
+        .legs-right {
+          position: absolute;
+          bottom: -70%;
+          z-index: -1;
+          right: -60%;
+        }
+      }
+    }
+
+    .leg {
+      @include size($leg-size * 2, $leg-size);
+      margin-top: -$leg-size / 2;
+      border: 5px solid transparent;
+      border-top-color: black;
+      border-radius: 50%/#{$leg-size} $leg-size 0 0;
+    }
+
+    @for $i from 1 through 3 {
+      .legs-left .leg:nth-child(#{$i}) {
+        transform: rotate(40deg - $i * 30deg);
+        margin-left: $i * 10px;
+      }
+
+      .legs-right .leg:nth-child(#{$i}) {
+        transform: rotate(-40deg + $i * 30deg);
+        margin-left: $i * -10px;
+      }
+    }
+
+    @keyframes look2 {
+      0% {
+        transform: translateX(0);
+      }
+      40% {
+        transform: translateX(0);
+      }
+      45% {
+        transform: translateX(110%);
+      }
+      95% {
+        transform: translateX(110%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+}

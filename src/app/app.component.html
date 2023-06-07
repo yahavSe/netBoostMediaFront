@@ -1,0 +1,6 @@
+<router-outlet></router-outlet>
+<o-tall-json-size-detector (onSizeChanged)="onScreenSizedChanged($event)"></o-tall-json-size-detector>
+<!-- global loader-->
+<div *ngIf="(globalLoading$ | async)" class="global-loader">
+  <app-loader></app-loader>
+</div>

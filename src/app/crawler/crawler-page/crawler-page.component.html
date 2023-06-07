@@ -1,0 +1,35 @@
+<div class="crawler-main">
+    <span class="header">{{'Crawler Me A WebSite' | transloco}}</span>
+    <div class="form-wrapper">
+        <div class="input-wrapper">
+             <span [ngStyle]="{'visibility' : (urlFormControl.dirty && urlFormControl.touched && urlFormControl.errors) ? '' : 'hidden'}"
+                   class="input-error">{{'Please enter a valid URL' | transloco}}
+                </span>
+            <span>{{'Enter A URL To Scan: ' | transloco}}</span>
+            <div class="input-error-wrapper">
+                <input class="input"
+                       [formControl]="urlFormControl"
+                       [placeholder]="'Search here i.e: yahav-selekter.com' | transloco"
+                       type="text"/>
+
+            </div>
+        </div>
+        <div class="input-wrapper">
+            <span [ngStyle]="{'visibility' : (depthFormControl.dirty && depthFormControl.touched && depthFormControl.errors) ? '' : 'hidden'}"
+                  class="input-error">{{'Please enter a Valid Number ( not 0 )' | transloco}}
+                </span>
+            <span>{{'Enter The Depth To Scan: ' | transloco}}</span>
+            <div class="input-error-wrapper">
+                <input class="input-number"
+                       [formControl]="depthFormControl"
+                       [placeholder]="'If no depth is specified, it will be 1' | transloco"
+                       type="number"/>
+            </div>
+        </div>
+        <a class="search-button" (click)="search()">{{'Search' | transloco}}</a>
+    </div>
+    <div class="data-table">
+        <crawler-table></crawler-table>
+    </div>
+</div>
+

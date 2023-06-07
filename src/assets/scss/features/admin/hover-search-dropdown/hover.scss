@@ -1,0 +1,70 @@
+.hover-search-container {
+  background-color: white;
+  border: 2px solid #D9E1E7;
+  border-radius: 9px;
+  width: 40vw;
+  font: normal normal 600 13px/55px Heebo;
+  color: #8A8C98;
+  min-width: 450px;
+  z-index: 100;
+
+  .hover-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(138, 140, 152, .27);
+
+    .left-item-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 1vh;
+      flex-grow: 1;
+      gap: 1.5vh;
+
+      .hover-profile-image {
+        border: 1px solid #7070704A;
+        object-fit: contain;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+      }
+
+      .hover-search-result {
+        font-size: 14px;
+        line-height: 55px;
+        font-weight: 100;
+      }
+
+      .tags-county {
+        opacity: .51;
+      }
+
+      .spacer-hover-item{
+        margin-right: auto
+      }
+    }
+
+    .hover-enter {
+      text-decoration: underline;
+      margin-right: 1vh;
+    }
+  }
+}
+
+
+html[dir=rtl]{
+  .hover-enter{
+    margin-left: 1.5vh;
+    margin-right: 0 !important;
+  }
+
+  .left-item-container{
+    margin-right: 1.5vh;
+    margin-left: 0 !important;
+  }
+  .spacer-hover-item{
+    margin-left: auto;
+    margin-right: 0 !important;
+  }
+}
