@@ -1,6 +1,16 @@
 {
   "App Name": "NetBoostMedia",
   "Crawler Me A WebSite" : "Crawler Me A WebSite",
+  "Please enter a valid URL": "Please enter a valid URL",
+  "Enter A URL To Scan: ": "Enter A URL To Scan: ",
+  "Enter The Depth To Scan: ": "Enter The Depth To Scan: ",
+  "Search here i.e: youtube.com": "Search here i.e: youtube.com",
+  "Please enter a Valid Number ( not 0 )": "Please enter a Valid Number ( not 0 )",
+  "If no depth is specified, it will be 1": "If no depth is specified, it will be 1",
+  "Search": "Search",
+  "URL": "URL",
+  "Time": "Time",
+  "Parent": "Parent",
   "httpErrors": {
     "100": "Continue",
     "101": "Switching Protocols",

@@ -1,6 +1,16 @@
 {
   "App Name": "NetBoostMedia",
   "Crawler Me A WebSite": "סרוק לי אתר אינטרנט",
+  "Please enter a valid URL": "אנא הכנס כתובת אינטרנט תקינה",
+  "Enter A URL To Scan: ": "הכנס כתובת לסריקה",
+  "Enter The Depth To Scan: ": "הכנס עומק סריקה",
+  "Search here i.e: youtube.com": "חפש כאן למשל: youtube.com",
+  "Please enter a Valid Number ( not 0 )": "אנא הכנס מספר תקין (לא 0)",
+  "If no depth is specified, it will be 1": "אם עומק לא ציין הוא יהיה 1",
+  "Search": "חפש",
+  "URL": "כתובת",
+  "Time": "זמן",
+  "Parent": "מקור",
   "httpErrors": {
     "100": "המשך",
     "101": "Switching Protocols",
