@@ -78,7 +78,8 @@ export class CrawlerPageComponent extends Destroyable implements OnInit {
                     if (response.urlList.existingUrl) {
                         const dialogRef = this.dialog.open(CrawlerPopupComponent, {
                             data: {
-                                url:url
+                                url:url,
+                                depth: depth
                             }
                         });
                         dialogRef.afterClosed().subscribe(value => {

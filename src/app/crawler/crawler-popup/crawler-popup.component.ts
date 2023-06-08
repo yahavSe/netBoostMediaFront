@@ -17,6 +17,7 @@ export class CrawlerPopupComponent implements OnInit {
     constructor(
         @Inject(MAT_DIALOG_DATA) public data: {
             url?: string;
+            depth?:number;
         },
         private store: Store,
         private router: Router,
@@ -38,7 +39,7 @@ export class CrawlerPopupComponent implements OnInit {
         this.store.dispatch(refreshUrl({
             filtersSearch: {
                 urlSearch: this.data.url,
-                depth: 1
+                depth: this.data.depth
             }
         }))
         this.dialogRef.close();
