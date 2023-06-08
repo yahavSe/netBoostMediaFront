@@ -16,9 +16,7 @@ import {selectLanguage} from "@net-boost-media/store/selectors/locale.selectors"
 export class MainNavigationBarComponent extends Destroyable implements OnInit {
   //language
   languageFormControl!: FormControl;
-  mouseHoverSearch: boolean = false;
   //expansion-panel
-  panelOpenState = false;
   searchFormControl!: FormControl;
   language$ = this.store.select(selectLanguage);
 
@@ -42,9 +40,6 @@ export class MainNavigationBarComponent extends Destroyable implements OnInit {
 
   initLanguageForm() {
     this.languageFormControl = this.formBuilder.control(null);
-  }
-  toggleHover(isMouseHover: boolean) {
-    this.mouseHoverSearch = isMouseHover;
   }
   LanguageSetUp() {
     let value = this.languageFormControl.value;

@@ -16,11 +16,6 @@ body {
   margin: 0;
 }
 
-//google drop down auto complete
-.pac-container {
-  z-index: 10000;
-}
-
 // input
 input, textarea, button, select {
   border: none;
@@ -41,7 +36,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-// remove mat dialog white background
 .mat-dialog-container {
   box-shadow: unset;
   background: unset;
